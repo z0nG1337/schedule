@@ -73,7 +73,8 @@ export function ScheduleApp() {
         className="relative overflow-hidden bg-cover bg-center"
         style={{
           backgroundImage: "url('/assets/images/bg-banner.png')",
-          backgroundColor: "var(--accent)",
+          backgroundColor: "var(--accent-light)",
+
         }}
       >
         <div className="flex items-center justify-center py-10 md:py-14">
