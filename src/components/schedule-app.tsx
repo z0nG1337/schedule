@@ -72,8 +72,9 @@ export function ScheduleApp() {
       <section
         className="relative overflow-hidden bg-cover bg-center"
         style={{
-          backgroundImage: "url('/assets/images/bg-banner.png')",
+          backgroundImage: "none",
           backgroundColor: "var(--accent-light)",
+
 
         }}
       >
