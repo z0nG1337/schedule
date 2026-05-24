@@ -19,8 +19,23 @@ export function TeacherApp() {
     <div className="min-h-full bg-[var(--bg)] text-[var(--text)]">
       <AppHeader schoolName="Школа" weekLabel={weekLabel} />
 
+      {/* Hero Banner */}
+      <section
+        className="relative overflow-hidden bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/assets/images/bg-banner.png')",
+          backgroundColor: "var(--accent)",
+        }}
+      >
+        <div className="flex items-center justify-center py-10 md:py-14">
+          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+            Расписание
+          </h1>
+        </div>
+      </section>
+
       <main className="mx-auto max-w-5xl px-4 py-6">
-        <section className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6">
+        <section className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-sm">
           <div className="mb-6">
             <h2 className="text-lg font-semibold">
               Расписание преподавателей
@@ -41,8 +56,12 @@ export function TeacherApp() {
             <button
               type="button"
               onClick={() => setBellsOpen(true)}
-              className="rounded-lg border border-[var(--border)] px-3 py-2 text-sm hover:bg-[var(--surface-hover)]"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--border)] px-3 py-2 text-sm hover:bg-[var(--surface-hover)] transition-colors"
             >
+              <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path fill="none" stroke="currentColor" strokeMiterlimit="10" strokeWidth="32" d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" />
+                <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" d="M256 128v144h96" />
+              </svg>
               Звонки
             </button>
           </div>

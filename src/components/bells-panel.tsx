@@ -38,7 +38,7 @@ export function BellsPanel({ bells, open, onClose }: Props) {
                 key={b.slot}
                 className="flex items-center justify-between rounded-xl bg-[var(--surface-hover)] px-4 py-3"
               >
-                <span className="font-medium">{b.slot} пара</span>
+                  <span className="font-medium">{b.slot} урок</span>
                 <span className="text-sm text-[var(--muted)]">
                   {b.start}
                   {b.end ? ` – ${b.end}` : ""}
