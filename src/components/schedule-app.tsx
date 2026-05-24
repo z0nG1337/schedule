@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { SchedulePayload } from "@/lib/types";
 import { currentWeekStartIso, formatWeekRange } from "@/lib/week";
+import { AppHeader } from "./shared/app-header";
 import { BellsPanel } from "./bells-panel";
 import { ScheduleGrid } from "./schedule-grid";
 import { ThemeToggle } from "./theme-toggle";
@@ -66,30 +67,7 @@ export function ScheduleApp() {
 
   return (
     <div className="min-h-full bg-[var(--bg)] text-[var(--text)]">
-      <header className="sticky top-0 z-40 border-b border-[var(--border)] bg-[var(--bg)]/90 backdrop-blur-md">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-4">
-          <div>
-            <p className="text-xs font-medium uppercase tracking-wide text-[var(--accent)]">
-              Расписание
-            </p>
-            <h1 className="text-xl font-bold">{data?.schoolName ?? "Школа"}</h1>
-            <p className="mt-0.5 text-sm text-[var(--muted)]">
-              Текущая неделя · {weekLabel}
-            </p>
-          </div>
-          <nav className="flex gap-2 text-sm">
-            <span className="rounded-lg bg-[var(--accent)] px-3 py-1.5 font-medium text-white">
-              Ученикам
-            </span>
-            <a
-              href="/teacher"
-              className="rounded-lg px-3 py-1.5 text-[var(--muted)] hover:bg-[var(--surface-hover)]"
-            >
-              Учителям
-            </a>
-          </nav>
-        </div>
-      </header>
+      <AppHeader schoolName={data?.schoolName} weekLabel={weekLabel} />
 
       <main className="mx-auto max-w-5xl px-4 py-6">
         {isDemo && (
