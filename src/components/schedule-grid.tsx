@@ -105,7 +105,9 @@ export function ScheduleGrid({ schedule, bells }: Props) {
                       </span>
                       {time && (
                         <span className="text-[11px] text-[var(--muted)] font-medium">
-                          {time.start}–{time.end}
+                          Начало: {time.start}
+                          <span className="text-[10px]"> · </span>
+                          Конец: {time.end}
                         </span>
                       )}
                     </div>
