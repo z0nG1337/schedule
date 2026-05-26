@@ -103,12 +103,12 @@ export function ScheduleGrid({ schedule, bells }: Props) {
                       <span className="inline-flex items-center justify-center rounded-md bg-[var(--accent)] px-2 py-0.5 text-[11px] font-semibold text-white leading-tight">
                         [{lesson.slot}] урок
                       </span>
-                      {time && (
+                      {time ? (
                         <span className="text-[11px] text-[var(--muted)] font-medium">
-                          Начало: {time.start}
-                          <span className="text-[10px]"> · </span>
-                          Конец: {time.end}
+                          Начало: {time.start} · Конец: {time.end}
                         </span>
+                      ) : (
+                        <span className="text-[11px] text-[var(--muted)] font-medium">—</span>
                       )}
                     </div>
 
