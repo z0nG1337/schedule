@@ -101,7 +101,7 @@ export function ScheduleGrid({ schedule, bells }: Props) {
                     {/* Top row: slot badge + time */}
                     <div className="flex items-center justify-between mb-1.5">
                       <span className="inline-flex items-center justify-center rounded-md bg-[var(--accent)] px-2 py-0.5 text-[11px] font-semibold text-white leading-tight">
-                        {lesson.slot} урок
+                        [{lesson.slot}] урок
                       </span>
                       {time && (
                         <span className="text-[11px] text-[var(--muted)] font-medium">

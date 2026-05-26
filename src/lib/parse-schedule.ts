@@ -75,12 +75,12 @@ export function parseScheduleCsv(text: string): ParsedSchedule {
     const dayRaw =
       pick(row, ["день", "day", "день_недели"]) || lastDayRaw;
     const group =
-      pick(row, ["класс", "class", "группа", "group"]) || lastGroup;
+      pick(row, ["класс", "class", "класс", "class"]) || lastGroup;
     const weekRaw = pick(row, ["неделя", "week", "week_start", "дата_недели"]);
     const subject = pick(row, ["предмет", "subject", "дисциплина"]);
-    const room = pick(row, ["кабинет", "room", "аудитория"]);
+    const room = pick(row, ["кабинет", "room", "кабинет"]);
     const teacher = pick(row, ["учитель", "teacher", "преподаватель"]);
-    let slot = Number(pick(row, ["пара", "slot", "lesson", "урок"]));
+    let slot = Number(pick(row, ["урок", "slot", "lesson", "урок"]));
 
     if (dayRaw) lastDayRaw = dayRaw;
     if (group) lastGroup = group;
